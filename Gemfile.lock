@@ -146,6 +146,7 @@ GEM
     passenger (5.0.28)
       rack
       rake (>= 0.8.1)
+    pg (0.18.4)
     pundit (1.0.1)
       activesupport (>= 3.0.0)
     quiet_assets (1.1.0)
@@ -269,6 +270,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   passenger
+  pg
   pundit
   quiet_assets
   rails (= 4.2.5)

@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'dotenv-rails'
 gem 'passenger'
+gem 'pg'
 
 group :development, :test do
   gem 'byebug'
