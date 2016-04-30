@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+gem 'dotenv-rails'
 gem 'passenger'
 
 group :development, :test do
@@ -33,7 +34,6 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.2', require: false
   gem 'capistrano-passenger'
   gem 'capistrano-rvm',     '~> 0.1', require: false
-  gem 'capistrano-env-config'
 end
 group :development, :test do
   gem 'factory_girl_rails'
