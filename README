@@ -1,3 +1,5 @@
+rvmsudo passenger-install-nginx-module
+
 Rails Devise Pundit
 ========================
 
