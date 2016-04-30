@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
-gem 'dotenv-rails'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'passenger'
 
 group :development, :test do
