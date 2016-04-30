@@ -64,6 +64,9 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-env-config (0.3.0)
+      capistrano (~> 3.0)
+      dotenv (~> 2.0)
     capistrano-harrow (0.4.0)
     capistrano-passenger (0.2.0)
       capistrano (~> 3.0)
@@ -99,6 +102,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dotenv (2.1.1)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -247,6 +251,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capistrano-bundler (~> 1.1.2)
+  capistrano-env-config
   capistrano-passenger
   capistrano-rails (~> 1.1)
   capistrano-rvm (~> 0.1)
