@@ -1,3 +1,4 @@
+rvm install ruby-2.2.3
 rvmsudo passenger-install-nginx-module
 
 Rails Devise Pundit
