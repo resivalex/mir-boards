@@ -34,6 +34,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.2', require: false
   gem 'capistrano-passenger'
   gem 'capistrano-rvm',     '~> 0.1', require: false
+  gem 'capistrano-faster-assets', '~> 1.0'
 end
 group :development, :test do
   gem 'factory_girl_rails'
