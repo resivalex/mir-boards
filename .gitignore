@@ -11,6 +11,8 @@
 #----------------------------------------------------------------------------
 
 # environment
+/config/database.yml
+/config/secrets.yml
 /.env
 
 # bundler state
