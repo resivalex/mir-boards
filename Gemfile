@@ -13,6 +13,7 @@ gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'dotenv-rails'
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'pg'
+gem 'slim'
 gem 'thin'
 
 group :development, :test do

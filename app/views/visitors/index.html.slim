@@ -1,0 +1,14 @@
+h3 Добро пожаловать
+p
+  | #{User.count} пользователя зарегистрировано
+table.table
+  thead
+    tr
+      th Аватар
+      th Имя
+  tbody
+    - @users.each do |user|
+      tr
+        td
+          = image_tag user.avatar.url(:thumb), style: 'margin-left:0;'
+        td = user.name

@@ -1,10 +1,18 @@
 ActiveAdmin.register User do
   permit_params :list, :of, :attributes, :on, :model,
       :name, :role, :email, :password, :avatar
-      
+
   before_create do |user|
    user.skip_confirmation!
   end
+
+  filter :name
+  filter :email
+  filter :role
+
+  scope :all
+  scope 'Administrators', :admin
+  scope 'Riders', :rider
 
   index do
     id_column
@@ -30,8 +38,10 @@ ActiveAdmin.register User do
       f.input :name
       f.input :role
       f.input :email
-      # f.input :password
-      f.input :avatar, :required => false, :as => :file
+      if f.object.new_record?
+        f.input :password
+      end
+      f.input :avatar, :required => false, :as => :file, hint: f.object.avatar? ? image_tag(f.object.avatar.url, height: '100') : content_tag(:span, "Upload JPG/PNG/GIF image")
     end
     f.actions
   end
