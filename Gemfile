@@ -9,9 +9,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'dotenv-rails'
-gem 'passenger'
 gem 'pg'
+gem 'thin'
 
 group :development, :test do
   gem 'byebug'
