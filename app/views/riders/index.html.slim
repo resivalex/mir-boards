@@ -1,0 +1,13 @@
+h1 Райдеры
+table.table
+  thead
+    tr
+      th Аватар
+      th Имя
+  tbody
+    - @riders.each do |rider|
+      tr
+        td
+          = image_tag rider.avatar.url(:thumb), style: 'margin-left:0;'
+        td
+          = link_to rider.name.present? ? rider.name : '[No name]', rider_path(rider)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160501192208) do
+ActiveRecord::Schema.define(version: 20160502152835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20160501192208) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "nominations", force: :cascade do |t|
+    t.string  "name"
+    t.integer "gender"
+    t.integer "age_from"
+    t.integer "age_to"
+    t.text    "description"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

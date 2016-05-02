@@ -1,5 +1,11 @@
 class User < ActiveRecord::Base
-  enum role: [:admin, :rider]
+  # Include default devise modules. Others available are:
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable,
+         :confirmable
+         
+  enum role: { admin: 0, rider: 1 }
 
   has_attached_file :avatar,
                     styles: { medium: "300x300>", thumb: "100x100>" },
@@ -12,9 +18,4 @@ class User < ActiveRecord::Base
     self.role ||= :rider
   end
 
-  # Include default devise modules. Others available are:
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable
 end
