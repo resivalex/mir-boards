@@ -1,14 +1,14 @@
 h3 Добро пожаловать
 p
-  | #{User.count} пользователя зарегистрировано
+  | Зарегистрировано: #{@riders.count} #{Russian.p(@riders.count, 'райдер', 'райдера', 'райдеров')}
 table.table
   thead
     tr
       th Аватар
       th Имя
   tbody
-    - @users.each do |user|
+    - @riders.each do |rider|
       tr
         td
-          = image_tag user.avatar.url(:thumb), style: 'margin-left:0;'
-        td = user.name
+          = image_tag rider.avatar.url(:thumb), style: 'margin-left:0;'
+        td = rider.name

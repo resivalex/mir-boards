@@ -9,7 +9,7 @@ h2 Регистрация
     = f.label :password
     - if @minimum_password_length
       em
-        | (#{@minimum_password_length} characters minimum)
+        | (#{@minimum_password_length} символов минимум)
     br/
     = f.password_field :password, autocomplete: "off"
   .field

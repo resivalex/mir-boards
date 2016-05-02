@@ -1,0 +1,13 @@
+ru:
+  hello: "Hello world"
+
+  helpers:
+    label:
+      user:
+        avatar: Аватар
+        current_password: Текущий пароль
+        email: E-mail
+        name: Имя
+        password: Пароль
+        password_confirmation: Повторите пароль
+        role: Роль

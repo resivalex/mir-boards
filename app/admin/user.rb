@@ -10,7 +10,7 @@ ActiveAdmin.register User do
   filter :email
   filter :role
 
-  scope :all
+  scope 'All', :all
   scope 'Administrators', :admin
   scope 'Riders', :rider
 
