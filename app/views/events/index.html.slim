@@ -1,0 +1,25 @@
+h1 Соревнования
+table.table
+  thead
+    tr
+      th Фото
+      th Дата
+      th Название
+      th Номинация
+      th Место проведения
+  tbody
+    - @events.each do |event|
+      tr
+        td
+          = image_tag event.photo.url(:thumb), style: 'margin-left:0;'
+        td
+          = event.date
+        td
+          = link_to event.name.present? ? event.name : '[No name]', event_path(event)
+        td
+          - if event.nomination.present?
+            = link_to event.nomination.name, nomination_path(event.nomination)
+          - else
+            |[No nomination]
+        td
+          = event.location

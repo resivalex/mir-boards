@@ -3,9 +3,7 @@ table.table
   thead
     tr
       th Название
-      th Описание
   tbody
     - @nominations.each do |nomination|
       tr
-        td = nomination.name
-        td == nomination.description
+        td = link_to nomination.name, nomination_path(nomination)

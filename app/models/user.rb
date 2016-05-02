@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
   has_attached_file :avatar,
                     styles: { medium: "300x300>", thumb: "100x100>" },
                     default_url: "/favicon.ico"
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+  validates_attachment :avatar, content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+  validates_attachment_file_name :avatar, matches: [/gif\Z/, /png\Z/, /jpe?g\Z/]
 
   after_initialize :set_default_role, :if => :new_record?
 

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :nominations, only: :index
+  resources :nominations, only: [:index, :show]
 
   resources :riders, only: [:index, :show]
+
+  resources :events, only: [:index, :show]
 end

@@ -16,8 +16,8 @@ ActiveAdmin.register User do
 
   index do
     id_column
-    column :avatar do |ad|
-      image_tag(ad.avatar.url(:thumb))
+    column :avatar do |user|
+      image_tag(user.avatar.url(:thumb))
     end
     column :name
     column :role
@@ -47,12 +47,12 @@ ActiveAdmin.register User do
   end
 
   show do |user|
-      attributes_table do
-        row :name
-        row :avatar do
-          user.avatar ? image_tag(user.avatar.url(:thumb)) : content_tag('No avatar')
-        end
-        # Will display the image on show object page
+    attributes_table do
+      row :name
+      row :avatar do
+        user.avatar ? image_tag(user.avatar.url(:thumb)) : content_tag('No avatar')
       end
+      # Will display the image on show object page
     end
+  end
 end

@@ -1,0 +1,24 @@
+h1 Номинация
+table.table
+  tbody
+    tr
+      td Название
+      td = @nomination.name
+    tr
+      td Пол
+      td
+        = 'Мужчины' if @nomination.male?
+        = 'Женщины' if @nomination.female?
+        = 'Любой' if @nomination.any_gender?
+    tr
+      td Возраст
+      td
+        - if @nomination.age_from || @nomination.age_to
+          == "От #{@nomination.age_from} " unless @nomination.age_from.blank?
+          == "До #{@nomination.age_to} " unless @nomination.age_to.blank?
+        - else
+          | Любой
+    tr
+      td Описание
+      td == @nomination.description
+
