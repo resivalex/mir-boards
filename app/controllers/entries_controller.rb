@@ -1,6 +1,7 @@
 class EntriesController < ApplicationController
   def create
     entry = Entry.new
+    authorize entry
     entry.user = User.find params[:user_id]
     entry.event = Event.find params[:event_id]
     if entry.save

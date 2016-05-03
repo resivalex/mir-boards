@@ -10,4 +10,4 @@ table.table
         td
           = image_tag rider.avatar.url(:thumb), style: 'margin-left:0;'
         td
-          = link_to rider.name.present? ? rider.name : '[No name]', rider_path(rider)
+          = link_to rider.name, rider_path(rider)

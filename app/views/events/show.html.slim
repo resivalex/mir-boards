@@ -23,3 +23,13 @@ table.table
       td Описание
       td
         == @event.description
+    tr
+      td Райдеры
+      td#riders
+        - if @event.riders.count > 0
+          ul
+            - @event.riders.each do |rider|
+              li
+                = link_to rider.name, rider_path(rider)
+        - else
+          | Нет заявок

@@ -14,3 +14,9 @@ tr
     = event.location
   td
     = render 'entry_link', entry: Entry.where(event_id: event.id, user_id: current_user.try(:id)).take, event: event
+  td
+    - entries_count = Entry.where(event_id: event.id).count
+    - if entries_count != 0
+      = link_to entries_count, event_path(event, anchor: 'riders')
+    - else
+      | Нет заявок
