@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :riders, only: [:index, :show]
 
   resources :events, only: [:index, :show]
+
+  resources :entries, only: [:create, :destroy]
 end

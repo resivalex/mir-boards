@@ -4,7 +4,7 @@
 
   - if current_user.try(:admin?)
     li
-      = link_to 'ActiveAdmin', '/admin'
+      = link_to 'Админка', '/admin'
   li
     = link_to 'Выйти', destroy_user_session_path, :method=>'delete'
 - else

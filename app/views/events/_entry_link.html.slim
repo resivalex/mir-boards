@@ -1,0 +1,4 @@
+- if entry
+  = link_to 'Отменить заявку', url_for(action: :destroy, controller: :entries, id: entry.id), method: :delete
+- else
+  = link_to 'Подать заявку', url_for(action: :create, controller: :entries, user_id: current_user.try(:id), event_id: event.id), method: :post

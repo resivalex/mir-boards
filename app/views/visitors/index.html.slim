@@ -1,3 +1,4 @@
 h3 Добро пожаловать
-p
-  | Зарегистрировано: #{@riders.count} #{Russian.p(@riders.count, 'райдер', 'райдера', 'райдеров')}
+p #{@riders.count} #{Russian.p(@riders.count, 'райдер', 'райдера', 'райдеров')}
+p #{@nominations.count} #{Russian.p(@nominations.count, 'номинация', 'номинации', 'номинаций')}
+p #{@events.count} #{Russian.p(@events.count, 'совернование', 'совернования', 'совернований')}
